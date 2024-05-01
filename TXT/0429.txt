@@ -1,0 +1,273 @@
+#prop-types : props 검사해줌.자료형과 이름이 전달되었는지
+import React from "react";
+
+
+//Food 컴포넌트에 props의 데이터 출력하려면 중괄호 + props.객체 (객체 값은 .연산자 사용)
+function Food({name, picture}){
+  return(
+    <div>
+      <h2>my Menu {name}</h2>
+      <img src={picture}  alt={name} />
+    </div>
+  );
+}
+//foodlist 변수에 빈 배열 저장함.
+const foodlist=[
+  {
+    id:1,
+    name: 'cookie',
+    image:'../img/cookie.jpeg',
+  },
+  {
+    id:2,
+    name: 'bagle',
+    image:'../img/Bagle.jpeg',
+  },
+  {
+    id:3,
+    name: 'morningRoll',
+    image:'../img/cinnamonroll.jpg',
+  }
+];
+
+//map 함수의 화살표 인자를 일반함수 renderFood로 작성.
+
+
+function App() {
+  console.log('3');
+  return(
+    <div>
+      {(
+        foodlist.map(dish => 
+        <Food key ={dish.id} name={dish.name} picture={dish.image}/>))
+      }
+    </div>
+  );
+
+}
+
+export default App;
+______________________________________________________
+render() 함수 : jsx 반환함. 자동 실행되는 함수이다.
+class component 사용 이유 - state 사용하기 위해
+
+button element -> onClick 속성 넣고, 속성값으로 this.add 함수넣기
+import React from "react";
+//import PropTypes from "prop-types";
+//App 컴포넌트가 react.componenet 클래스 상속빋음
+class App extends React.Component {
+  //state에 동적 데이터 저장가능해야한다.
+  state = {
+    count : 0,
+    
+  };
+  add=() => {
+    console.log("add activated");
+  };
+
+  minus=() => {
+    console.log("minus activated");
+  };
+
+  render(){
+    return (
+    <div>
+       <h3>The number is : {this.state.count} </h3>;
+      <button onClick={this.add}>add</button>
+      <button onClick={this.minus}>minus</button>
+      </div>
+  );
+}
+}
+export default App;
+++++++++++++++++++
+import React from "react";
+//import PropTypes from "prop-types";
+//App 컴포넌트가 react.componenet 클래스 상속빋음
+class App extends React.Component {
+  //state에 동적 데이터 저장가능해야한다.
+ 
+  state = {
+    count : 0,
+  };
+  //setState() 함수의 첫 인자로 count키와 값을 넣은 객체 전달함.
+  add=() => {
+    console.log("add activated");
+    this.setState({count:this.state.count+1});
+  };
+
+  minus=() => {
+//    console.log("minus activated");
+      this.setState({count:this.state.count-1});
+  };
+
+  render(){
+    return (
+    <div>
+       <h3>The number is : {this.state.count} </h3>;
+      <button onClick={this.add}>add</button>
+      <button onClick={this.minus}>minus</button>
+      </div>
+  );
+}
+}
+export default App;
++++++++++++++++++++++++++++++++++++++++++++
+import React from "react";
+//App 컴포넌트가 react.componenet 클래스 상속빋음
+class App extends React.Component {
+  //state에 동적 데이터 저장가능해야한다.
+ 
+  state = {
+    count : 0,
+  };
+  //setState() 함수의 첫 인자로 count키와 값을 넣은 객체 전달함.
+  add=() => {
+    console.log("add activated");
+    this.setState(current=> ({
+      count: this.state.count+1,
+    }));
+  };
+
+  minus=() => {
+    console.log("minus activated");
+    this.setState(current=> ({
+      count: this.state.count-1,
+    }));
+  };
+
+  render(){
+    return (
+    <div>
+       <h3>The number is : {this.state.count} </h3>;
+      <button onClick={this.add}>add</button>
+      <button onClick={this.minus}>minus</button>
+      </div>
+  );
+}
+}
+export default App;
+++++++++++++++++++++++++++++++++++
+@@컴포넌트 실행 순서
+//constructor() -> render() -> componentDidMount()
+
+
+import React from "react";
+//App 컴포넌트가 react.componenet 클래스 상속빋음
+class App extends React.Component {
+  //state에 동적 데이터 저장가능해야한다.
+  constructor(props){
+    super(props);
+    console.log('constructor props 1');
+  }
+  state = {
+    count : 0,
+  };
+  //setState() 함수의 첫 인자로 count키와 값을 넣은 객체 전달함.
+  add=() => {
+    console.log("add activated");
+    this.setState(current=> ({
+      count: this.state.count+1,
+    }));
+  };
+
+  minus=() => {
+    console.log("minus activated");
+    this.setState(current=> ({
+      count: this.state.count-1,
+    }));
+  };
+
+  componentDidMount(){
+    console.log('component rendered3');
+  }
+  //업데이트 시 실행
+  componentDidUpdate(){
+    console.log('component updated4');
+  }
+  //컴포넌트 죽음->화면에서 삭제
+  componentWillUnmount(){
+    console.log('unmount5')
+  }
+  render(){
+    console.log('rendering2!');
+    return (
+    <div>
+       <h3>The number is : {this.state.count} </h3>;
+      <button onClick={this.add}>add</button>
+      <button onClick={this.minus}>minus</button>
+      </div>
+  );
+}
+}
+export default App;
++++++++++++++++++++++++++++++
+import React from "react";
+//App 컴포넌트가 react.componenet 클래스 상속빋음
+class App extends React.Component {
+  
+  state = {
+    isLoading : true,
+  }
+//구조분해할당 ->this.state의 isLoading얻음 -> this.state 사용할 필요X
+//삼항연산자 사용
+  render(){
+    const {isLoading}=this.state;
+    return <div>{isLoading ? 'wait for loading' : 'welcome'}</div>;
+  }
+}
+export default App;
++++++++++++++++++++++++++++++
+
+  state = {
+    isLoading : true,
+  }
+  //app컴포넌트 그려질 때, 호출되는 didmount함수.
+  //settimeout():로딩 구현. didmount의 첫 인자로 전달함
+  //6000밀리초 후 실행함. 6초 후 false!
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({isLoading:false});
+    },6000);
+  }
+==> did mount 함수로 영화 앱 로딩하고, state에 저장하기.
+JS fetch() 함수 알아야 한다. 여기선 axios 사용할 것.
+API : https://yts.mx/api/v2/list_movies.json
+yts 영화 데이터 API 사이트
+
+
+
+import React from "react";
+import axios from 'axios';
+//import Movie from "./movie";
+
+//App 컴포넌트가 react.componenet 클래스 상속빋음
+class App extends React.Component {
+  state = {
+    isLoading : true,
+    movies: [],
+  };
+
+  gitMovies = () => {
+    //axios.get실행하고, 반환한 결과를 movies에 저장함.
+    const movies = axios.get('https://yts-proxy.now.sh/list_movies.json');
+  }
+
+  componentDidMount() {
+/*    setTimeout(() => {  this.setState({isLoading:false, movies:[],로딩 된 영화 data});},6000);*/
+    //axios로 API 호출
+    //const movies= axios.get('https://yts-proxy.now.sh/list_movies.json');
+    this.gitMovies();
+  }
+
+  render(){
+    const {isLoading}=this.state;
+    return <div>{isLoading ? 'wait for loading' : 'welcome'}</div>;
+  }
+}
+export default App;
+++++++++++++++++++++++++++++++++++
+componentdidmount함수 실행 시, this.getMovies()가 실행 된다.
+이 떄, 자바 스크립트한테 getMovies()함수는 시간이 걸린다고 말해야 axios.get()가 반환한 데이터를 제대로 잡을 수 있는데 이를 위해 async, await 필요하다.
+
+ 
