@@ -23,7 +23,7 @@ fetchDataFromServer(
   `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&sort_by=popularity.desc&include_adult=false&page=${currentPage}&${urlParam}`,
   function ({ results: movieList, total_pages }) {
     totalPages = total_pages;
-    document.title = `${genreName} Movies - Tvflix`;
+    document.title = `${genreName} Movies - MVTI`;
 
     const movieListElem = document.createElement("section");
     movieListElem.classList.add("movie-list", "genre-list");

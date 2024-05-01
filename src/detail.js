@@ -1,9 +1,7 @@
 "use strict";
 
 import { api_key, imageBaseURL, fetchDataFromServer } from "./api.js";
-
 import { sidebar } from "./sidebar.js";
-
 import { search } from "./search.js";
 
 //const movieId = window.localStorage.getItem("movieId");
@@ -13,14 +11,12 @@ sidebar();
 
 const getGenres = function (genreList) {
   const newGenreList = [];
-
   for (const { name } of genreList) newGenreList.push(name);
   return newGenreList.join(", ");
 };
 
 const getCasts = function (castList) {
   const newCastList = [];
-
   for (let i = 0, len = castList.length; i < len && len && i < 10; i++) {
     const { name } = castList[i];
     newCastList.push(name);
@@ -30,7 +26,6 @@ const getCasts = function (castList) {
 
 const getDirectors = function (crewList) {
   const directors = crewList.filter(({ job }) => job === "Director");
-
   const directorList = [];
   for (const { name } of directors) directorList.push(name);
   return directorList.join(", ");
@@ -139,16 +134,13 @@ fetchDataFromServer(
     for (const { key, name } of filterVideos(videos)) {
       const videoCard = document.createElement("div");
       videoCard.classList.add("video-card");
-
       videoCard.innerHTML = `
         <iframe width="500" height="294" src="https://www.youtube.com/embed/${key}?&theme=dark&color=white&rel=0" frameborder="0" allowfullscreen="1" title="${name}" class="img-cover" loading="lazy"></iframe>
         `;
-
       movieDetail.querySelector(".slider-inner").appendChild(videoCard);
     }
 
     pageContent.appendChild(movieDetail);
-
     fetchDataFromServer(
       `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${api_key}&page=1`,
       addSuggestedMovies
@@ -174,7 +166,6 @@ const addSuggestedMovies = function ({ results: movieList }, title) {
   for (const movie of movieList) {
     // Called from movie_card.js
     const movieCard = createMovieCard(movie);
-
     movieListElem.querySelector(".slider-inner").appendChild(movieCard);
   }
   pageContent.appendChild(movieListElem);

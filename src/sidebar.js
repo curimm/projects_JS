@@ -23,23 +23,13 @@ export function sidebar() {
       <div class="sidebar-list">
         <p class="title">Genre</p>
       </div>
-      <div class="sidebar-list">
-        <p class="title">Language</p>
 
-        <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=en", "English")'>English</a>
-
-        <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=hi", "Hindi")'>Hindi</a>
-        
-        <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=bn", "Bengali")'>Bengali</a>
-
-      </div>
       <div class="sidebar-footer">
-        <p class="copyright">Copyright 2023</p>
-        <a href="https://github.com/shivam171" style="font-size:15px"><img src="https://img.icons8.com/ios-filled/25/ffffff/github.png" alt="github"/>shivam171</a>
+        <a href="https://github.com/MVTI-MovieAndVideo-Recommender-Platform/FE.git" alt="MVTI가 궁금해요!"/>MVTI_Github</a>
         <br/>
         <img
-          src="./assets/images/tmdb-logo.png"
-          alt="the movie database logo"
+          src="../assets/icon01.jpg"
+          alt="MVTI Logo"
           width="130"
           height="17"
         />

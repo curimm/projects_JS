@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="MVTI" />
+    <title>MVTI_추천할게 너의 취향! |Main Page</title>
     <!-- primary meta tags -->
     <meta
       name="description"
@@ -22,10 +23,10 @@
     />
 
     <!-- StyleSheet : CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/img/search.png" />
     <!-- Scripting : JS -->
-    <script src="assets/js/global.js" defer></script>
-    <script src="assets/js/detail.js" type="module"></script>
+    <script src="../src/global.js" defer></script>
+    <script src="../src/detail.js" type="module"></script>
   </head>
 
   <body>
@@ -35,10 +36,10 @@
       
       <a href="./index.html" class="logo">
         <img
-          src="./assets/images/logo.svg"
-          alt="Tvflix Home"
+          src="../assets/img/pavicon"
+          alt="MVTI Home"
           width="140"
-          height="32"
+          height="140"
         />
       </a>
 
@@ -48,33 +49,26 @@
             type="text"
             name="search"
             aria-label="search movies"
-            placeholder="제목/키워드/개봉일 검색"
+            placeholder="힐링이 필요해!귀여운 영화 추천해줘"
             class="search-field"
             autocomplete="off"
             search-field
           />
-          <img
-            src="./assets/images/search.png"
+          <button class="search-btn">
+            <img
+            src="../assets/img/search.png"
             alt="search"
             class="leading-icon"
             width="24"
             height="24"
           />
-        </div>
+          </button>
 
-        <button class="search-btn" search-toggler menu-close>
-          <img
-            src="./assets//images/close.png"
-            width="24"
-            height="24"
-            alt="open search box"
-          />
-        </button>
-      </div>
+        </div>
 
       <button class="search-btn" search-toggler menu-close>
         <img
-          src="./assets/images/search.png"
+          src="../assets/img/search.png//"
           width="24"
           height="24"
           alt="검색창 열기"
@@ -83,14 +77,16 @@
 
       <button class="menu-btn" menu-btn menu-toggler>
         <img
-          src="./assets/images/menu.png"
+          src="../assets/img/search.png//"
           alt="메뉴 열기"
           class="menu"
           width="24"
           height="24"
         />
+      </button>
+      <button>
         <img
-          src="./assets/images/menu-close.png"
+          src="../assets/img/search.png //"
           alt="메뉴 닫기"
           class="close"
           width="24"
