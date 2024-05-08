@@ -7,7 +7,7 @@
     <meta name="title" content="LetsWatch" />
     <meta
       name="description"
-      content="Movie List page_ MVTI"
+      content="LetsWatch is a movie recommendation app made for my project work. #CAP615"
     />
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
     <!-- Title -->
-    <title>MVTI_추천할게 너의 취향,아껴줄게 너의 시간!</title> | MyPage</title>
+    <title>MVTI_추천할게 너의 취향,아껴줄게 너의 시간!</title> | List Page</title>
 
     <!-- StyleSheet : CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -28,75 +28,72 @@
     <script src="assets/js/movie-list.js" type="module"></script>
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
-      <a href="./index.html" class="logo">
-         <img
-         src="./favicon01.svg"
-         alt="MVTI Home"
-         width="140"
-         height="140"
-       />
+ 
+   <header class="header">
+      
+      <a href="./index.html" class="logo" >
+        <img
+          src="./favicon01.svg"
+          alt="MVTI Home"
+          width="80"
+          height="80"
+        />
       </a>
-
+      
       <div class="search-box" search-box>
         <div class="search-wrapper" search-wrapper>
           <input
             type="text"
             name="search"
-            aria-label="search contents"
-            placeholder="키워드로 컨텐츠 검색"
+            aria-label="search movies"
+            placeholder="힐링이 필요해!귀여운 영화 추천해줘"
             class="search-field"
             autocomplete="off"
             search-field
           />
-          <img
-            src="./assets/images/search.png"
+          <button class="search-btn">
+            <img
+            src="../assets/img/search.png"
             alt="search"
             class="leading-icon"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
           />
-        </div>
+          </button>
 
-        <button class="search-btn" search-toggler menu-close>
-          <img
-            src="./assets//images/close.png"
-            width="24"
-            height="24"
-            alt="open search box"
-          />
-        </button>
-      </div>
+        </div>
 
       <button class="search-btn" search-toggler menu-close>
         <img
-          src="./assets/images/search.png"
-          width="24"
-          height="24"
-          alt="open search box"
+          src="../assets/img/menu.png"
+          width="20"
+          height="20"
+          alt="검색창 열기"
         />
       </button>
 
       <button class="menu-btn" menu-btn menu-toggler>
         <img
-          src="./assets/images/menu.png"
-          alt="open menu"
+          src="../assets/img/openMenu.png"
+          alt="메뉴 열기"
           class="menu"
-          width="24"
-          height="24"
+          width="20"
+          height="20"
         />
+      </button>
+      <button>
         <img
-          src="./assets/images/menu-close.png"
-          alt="close menu"
+          src="../assets/img/closeMenu.png"
+          alt="메뉴 닫기"
           class="close"
-          width="24"
-          height="24"
+          width="20"
+          height="20"
         />
       </button>
     </header>
 
     <main>
+      
       <!-- Sidebar_공통-->
       <nav class="sidebar" sidebar></nav>
       <div class="overlay" overlay menu-toggler></div>

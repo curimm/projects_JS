@@ -26,6 +26,7 @@ export function sidebar() {
 
       <div class="sidebar-footer">
         <a href="https://github.com/MVTI-MovieAndVideo-Recommender-Platform/FE.git" alt="MVTI가 궁금해요!"/>MVTI_Github</a>
+
         <br/>
         <img
           src="../assets/icon01.jpg"
@@ -57,7 +58,7 @@ export function sidebar() {
   };
 
   const toggleSidebar = function (sidebar) {
-    // Toggle sidebar in Mobile Screen
+    //모바일 레이아웃 - toggle Sidebar
     const sidebarBtn = document.querySelector("[menu-btn]");
     const sidebarTogglers = document.querySelectorAll("[menu-toggler]");
     const sidebarClose = document.querySelectorAll("[menu-close]");
