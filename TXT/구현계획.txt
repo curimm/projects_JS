@@ -1,5 +1,9 @@
+1. 페이지 3개(메인/마이/상세), 
+2)폴더 정리_ git 올리고, 삭제할 것 정리 후 로컬 FE 작업중인 것: 
+ 	
 3) 수정
 https://sisiblog.tistory.com/328
+
 발표자료 _erd(캡쳐-> 자료)
 4). 라우터 연결(상세페이지 이동하기 구현(routing, Path Variable)
 5). 반응형
@@ -10,6 +14,7 @@ https://sisiblog.tistory.com/328
 8. PPT(내 파트라도 먼저 진행하기)
 
 
+---
 작업폴더: model01_js,페이지3개 개설중.
 git 업로드, 키보드 챙기기, 
 node_modules:
