@@ -7,7 +7,7 @@
     <meta name="title" content="LetsWatch" />
     <meta
       name="description"
-      content="LetsWatch is a movie recommendation app made for my project work. #CAP615"
+      content="MyPage_MVTI"
     />
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
@@ -19,18 +19,18 @@
       rel="stylesheet"
     />
     <!-- Title -->
-    <title>MVTI_추천할게 너의 취향,아껴줄게 너의 시간!</title> | List Page</title>
+    <title>MVTI | MyPage</title> | MyPage</title>
 
     <!-- StyleSheet : CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../src/css/style.css" />
     <!-- Scripting : JS -->
-    <script src="assets/js/global.js" defer></script>
-    <script src="assets/js/movie-list.js" type="module"></script>
+    <script src="../src/global.js" defer></script>
+    <script src="../src/mypage.js" type="module"></script>
+    <script src="../src/movie-list.js" type="module"></script>
   </head>
   <body>
- 
+ <!-- Header -->
    <header class="header">
-      
       <a href="./index.html" class="logo" >
         <img
           src="./favicon01.svg"
@@ -44,16 +44,16 @@
         <div class="search-wrapper" search-wrapper>
           <input
             type="text"
-            name="search"
-            aria-label="search movies"
-            placeholder="힐링이 필요해!귀여운 영화 추천해줘"
+            name="search" 
+            aria-label="search contents"
+            placeholder="귀여운 영화 추천해줘"
             class="search-field"
             autocomplete="off"
             search-field
           />
           <button class="search-btn">
             <img
-            src="../assets/img/search.png"
+            src="./assets/img/search.png"
             alt="search"
             class="leading-icon"
             width="20"
@@ -65,7 +65,7 @@
 
       <button class="search-btn" search-toggler menu-close>
         <img
-          src="../assets/img/menu.png"
+          src="./assets/img/search.png"
           width="20"
           height="20"
           alt="검색창 열기"
@@ -74,7 +74,7 @@
 
       <button class="menu-btn" menu-btn menu-toggler>
         <img
-          src="../assets/img/openMenu.png"
+          src="./assets/img/openMenu.png"
           alt="메뉴 열기"
           class="menu"
           width="20"
@@ -83,7 +83,7 @@
       </button>
       <button>
         <img
-          src="../assets/img/closeMenu.png"
+          src="./assets/img/closeMenu.png"
           alt="메뉴 닫기"
           class="close"
           width="20"
@@ -92,13 +92,32 @@
       </button>
     </header>
 
-    <main>
-      
-      <!-- Sidebar_공통-->
-      <nav class="sidebar" sidebar></nav>
-      <div class="overlay" overlay menu-toggler></div>
+    <div class="movie-list">
+      <h3>내가 찜한 컨텐츠</h3>
+      <div class="slide">
+          <img src="./assets/img/Adventure.jpg" alt="movie-Sample" width="200">
+      </div>
+      <div class="slide">
+          <img src="./assets/img/Chungking Express.jpg" alt="movie-Sample2" width="200">
+      </div>
+      <div class="slide">
+          <img src="./assets/img/Mr_ & Mrs. Smith" alt="movie-Sample3" width="200">
+      </div>
+   </div>
+   <div>
+      <h3>MVTI 맞춤 추천 컨텐츠</h3>
+      <div>
+         <img src="./assets/img/cookie.jpg" alt="movie-Sample3" width="200">
+     </div>
+   </div>
 
-      <article class="container" page-content></article>
-    </main>
-  </body>
+</div>                                                              
+  <script src="../src/index.js"></script>   
+  <main>
+      
+   <!-- Sidebar_공통-->
+   <div class="overlay" overlay menu-toggler></div>
+ </main>
+
+</body>
 </html>

@@ -192,3 +192,17 @@
    cursor: pointer;
    outline: none;
  }
+ .slider {
+   width: 200;                                 
+   overflow: hidden;
+   position: relative;
+}
+.slide {
+   float: left;
+   width: 100%;
+   position: relative;
+}
+img {
+   width: "200";
+   height: auto;                                                        
+}

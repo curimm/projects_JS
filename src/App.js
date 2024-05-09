@@ -24,7 +24,7 @@ class App extends React.Component {
 
   render(){
     const {isLoading}=this.state;
-    return <div>{isLoading ? 'wait for loading' : 'welcome'}</div>;
+    return <div>{isLoading ? '열심히 로딩 중! 잠시만 기다려주세요' : 'Wait for Loading!'}</div>;
   }
 }
 export default App;

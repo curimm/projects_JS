@@ -7,7 +7,7 @@
     <meta name="title" content="LetsWatch" />
     <meta
       name="description"
-      content="Movie List page_ MVTI"
+      content="Contents List page_ MVTI"
     />
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
@@ -19,13 +19,13 @@
       rel="stylesheet"
     />
     <!-- Title -->
-    <title>MVTI_추천할게 너의 취향,아껴줄게 너의 시간!</title> | MyPage</title>
+    <title>MVTI | List Page</title>| List Page</title>
 
     <!-- StyleSheet : CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../src/css/style.css" />
     <!-- Scripting : JS -->
-    <script src="assets/js/global.js" defer></script>
-    <script src="assets/js/movie-list.js" type="module"></script>
+    <script src="../src/global.js" defer></script>
+    <script src="../src/movie-list.js" type="module"></script>
   </head>
   <body>
     <!-- Header -->
@@ -34,8 +34,8 @@
          <img
          src="./favicon01.svg"
          alt="MVTI Home"
-         width="140"
-         height="140"
+         width="80"
+         height="80"
        />
       </a>
 
@@ -51,7 +51,7 @@
             search-field
           />
           <img
-            src="./assets/images/search.png"
+            src="./assets/img/search.png"
             alt="search"
             class="leading-icon"
             width="24"
@@ -59,19 +59,9 @@
           />
         </div>
 
-        <button class="search-btn" search-toggler menu-close>
-          <img
-            src="./assets//images/close.png"
-            width="24"
-            height="24"
-            alt="open search box"
-          />
-        </button>
-      </div>
-
       <button class="search-btn" search-toggler menu-close>
         <img
-          src="./assets/images/search.png"
+          src="./assets/img/search.png"
           width="24"
           height="24"
           alt="open search box"
@@ -80,15 +70,15 @@
 
       <button class="menu-btn" menu-btn menu-toggler>
         <img
-          src="./assets/images/menu.png"
-          alt="open menu"
+          src="./assets/img/closeMenu.png"
+          alt="메뉴_열기"
           class="menu"
           width="24"
           height="24"
         />
         <img
-          src="./assets/images/menu-close.png"
-          alt="close menu"
+          src="./assets/img/openMenu.png"
+          alt="메뉴_닫기"
           class="close"
           width="24"
           height="24"
@@ -100,7 +90,6 @@
       <!-- Sidebar_공통-->
       <nav class="sidebar" sidebar></nav>
       <div class="overlay" overlay menu-toggler></div>
-
       <article class="container" page-content></article>
     </main>
   </body>
