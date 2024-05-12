@@ -1,11 +1,14 @@
 "use strict";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import './css/index.css';
+import App from './App';
+import reportWebVitals from './components/reportWebVitals.js';
+
+
 import { sidebar } from "./sidebar.js";
 import { search } from "./search.js";
 import { createMovieCard } from "./movie-card.js";
-import React from 'react';
-import './css/index.css';
-import { createRoot } from 'react-dom/client';
-import App from './App';
 import { api_key } from "./api.js";
 
 
@@ -221,3 +224,4 @@ const createMovieList = function ({ results: movieList }, title) {
 };
 
 search();
+reportWebVitals();

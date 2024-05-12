@@ -1,5 +1,8 @@
 import React from "react";
 import axios from 'axios';
+import{BrowserRouter as Router, Route,Switch} from "react-router-dom";
+import MainPage from './pages/MainPage/MainPage'
+import DetailPage from './pages/DetailPage/DetailPage'
 //import Movie from "./movie";
 
 //App 컴포넌트가 react.componenet 클래스 상속빋음
