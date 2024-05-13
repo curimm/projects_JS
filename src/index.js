@@ -12,7 +12,6 @@ import { createMovieCard } from "./movie-card.js";
 import { api_key } from "./api.js";
 
 
-
 const pageContent = document.querySelector("[page-content]");
 sidebar();
 
@@ -22,23 +21,7 @@ const root = createRoot(document.getElementById("root"));
 //react는 한개의 컴포넌트를 그려야 한다. -> app컴포넌트 안에 potato컴포넌트 넣어야한다.
 root.render(<App />);
 
-// Home page sections (Top rated, Upcoming, Trending Movies)
-const homePageSections = [
-  {
-    title: "Upcoming Movies",
-    path: "/movie/upcoming",
-  },
-  {
-    title: "This Week Trending Movies",
-    path: "/trending/movie/week",
-  },
-  {
-    title: "Top Rated Movies",
-    path: "/movie/top_rated",
-  },
-];
-
-// Fetch all genres then change genre format
+// 모든 장르 호출, 장르 지정
 const genreList = {
   // create genre string from genre_id eg: [23, 43] -> "Action, Romance".
   asString(genreIdList) {
@@ -51,8 +34,7 @@ const genreList = {
     return newGenreList.join(", ");
   },
 };
-
-
+//server에서 데이터 호출
 fetchDataFromServer(
    `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`,
    function ({ genres }) {

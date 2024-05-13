@@ -1,8 +1,8 @@
 "use strict";
 
-import { api_key, imageBaseURL, fetchDataFromServer } from "./api.js";
-import { sidebar } from "./sidebar.js";
-import { search } from "./search.js";
+import { api_key, imageBaseURL, fetchDataFromServer } from "../../api.js";
+import { sidebar } from "../../components/sidebar.js";
+import { search } from "../../components/search.js";
 
 //const movieId = window.localStorage.getItem("movieId");
 const pageContent = document.querySelector("[page-content]");
