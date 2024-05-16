@@ -1,0 +1,23 @@
+#PPT 용
+https://www.mangoboard.net/
+https://www.canva.com/ko_kr/
+
+# S3 이미지 업&다운로드
+https://chanung.tistory.com/200
+
+# 라우팅 수정
+https://sisiblog.tistory.com/326  
+https://doyu-l.tistory.com/269
+#SPA 수정 및 컴포넌트별 분리
+
+node_modules: 재설치
+폴더 디렉토리의 터미널에서 npm i
+
+npm install react-router-dom@llatest
+data json)
+https://yts.mx/api/v2/list_movies.json
+https://yts.mx/api
+https://yts.mx/api/v2/movie_details.json/movie_id=10
+https://sisiblog.tistory.com/328
+https://velog.io/@jyun9842/%EC%83%81%EC%84%B8%ED%8E%98%EC%9D%B4%EC%A7%80
+

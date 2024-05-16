@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../css/Movie.css";
 
+//Movie 속성: ID,개봉년도, 제목,줄거리, 포스터, 장르
 function Movie({ id, year, title, summary, poster, genres }) {
   return (
     <div className="movie">
