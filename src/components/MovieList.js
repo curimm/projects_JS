@@ -1,12 +1,13 @@
+//MovieList_영화 리스트(무비카드와 무비 둘중 하나 불필요?
+//_(Component: SideBar,MovieCard,Search,Movie)
+
 "use strict";
-
 import { api_key, fetchDataFromServer } from "./api.js";
-
 import { sidebar } from "./sidebar.js";
-
-import { createMovieCard } from "./movie-card.js";
-
+import { createMovieCard } from "./MovieCard.js";
 import { search } from "./search.js";
+import "../css/Movie.css";
+
 
 // collection of genre name & url parameters from local storage
 const genreName = window.localStorage.getItem("genreName");

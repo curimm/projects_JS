@@ -1,3 +1,8 @@
+// 마이페이지(찜 리스트,시청리스트, MVTI추천리스트,재검사,마이페이지-MVTI_IMG리스트)
+import React from "react";
+import "./MyPage.css";
+
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const slideCount = slides.length;

@@ -1,8 +1,8 @@
+// movie card_컨텐츠 정보
 "use strict";
-
 import { imageBaseURL } from "./api.js";
+import "../css/Movie.css";
 
-// movie card
 
 export function createMovieCard(movie) {
   const { poster_path, title, vote_average, release_date, id } = movie;

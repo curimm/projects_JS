@@ -1,5 +1,6 @@
 // 메인페이지(시청리스트,인기리스트, MVTI추천리스트)
 import React from "react";
+import "./MainPage.css";
 
 const MainPage = () => {
   return(

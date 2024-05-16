@@ -1,7 +1,12 @@
 //const loginForm = document.getElementById("login-form");
 //const loginButton = document.getElementById("login-form-submit");
 //const loginErrorMsg = document.getElementById("login-error-msg");
+//import { api_key, imageBaseURL, fetchDataFromServer } from "../../api.js";
+//import { sidebar } from "../../components/sidebar.js";
+//import { search } from "../../components/search.js";
 "use strict";
+import React from "react";
+import "./LoginPage.css";
 const React = require('react');
 const GoogleLogin = require('react-google-login');
 const KakaoLogin = require('react-Kakao-login');
